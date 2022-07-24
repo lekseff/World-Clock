@@ -1,3 +1,8 @@
+![example workflow](https://github.com/lekseff/World-Clock/actions/workflows/deploy.yml/badge.svg)
+
+[GitHub Pages](https://lekseff.github.io/World-Clock/)
+
+
 Мировые часы
 ===
 
