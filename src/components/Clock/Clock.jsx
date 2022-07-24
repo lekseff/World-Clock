@@ -11,29 +11,30 @@ function Clock(props) {
         seconds: 0,
     });
 
-    const getArrowTime = () => {
-        const date = new Date();
-        const utcHours = date.getUTCHours();
-        const utcMinutes = date.getUTCMinutes();
-        const utcSeconds = date.getUTCSeconds();
-        let hours = utcHours > 12 ? utcHours - 12 : utcHours;
-        hours = Math.abs(hours + Number.parseInt(timezone));
-        if (hours > 12) hours = hours - 12;
-        return { hours, minutes: utcMinutes, seconds: utcSeconds };
-    };
-
     useEffect(() => {
+        console.log('use');
+        const getArrowTime = () => {
+            const date = new Date();
+            const utcHours = date.getUTCHours();
+            const utcMinutes = date.getUTCMinutes();
+            const utcSeconds = date.getUTCSeconds();
+            let hours = utcHours > 12 ? utcHours - 12 : utcHours;
+            hours = Math.abs(hours + Number.parseInt(timezone));
+            if (hours > 12) hours = hours - 12;
+            return { hours, minutes: utcMinutes, seconds: utcSeconds };
+        };
         // Устанавливаем начальное состояние
         const { hours, minutes, seconds } = getArrowTime();
         setTime(() => ({ hours, minutes, seconds }));
 
         const intervalId = setInterval(() => {
             const { hours, minutes, seconds } = getArrowTime();
+            console.log('int');
             setTime(() => ({ hours, minutes, seconds }));
         }, 1000);
 
         return () => clearInterval(intervalId);
-    }, []);
+    }, [timezone]);
 
     return (
         <div className={styles.clock}>
@@ -67,8 +68,7 @@ function Clock(props) {
 
 export default Clock;
 
-
 Clock.defaultProps = {
-  city: '',
-  timezone: 0,
-}
+    city: '',
+    timezone: 0,
+};

@@ -27,7 +27,11 @@ function App () {
 
   return (
     <>
-      <Form form={form} onChange={handleChange} onSubmit={addWatch}/>
+      <Form 
+        form={form}
+        onChange={handleChange}
+        onSubmit={addWatch}
+      />
       <div className="all-clock">
         {!watches.length ? <p>Добавьте часы...</p> 
         : watches.map((watch) => <Clock watch={watch} key={watch.id} remove={removeWatch}/>)}
