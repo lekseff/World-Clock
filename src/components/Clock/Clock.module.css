@@ -1,0 +1,124 @@
+
+.clock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 260px;
+  border: 1px solid lightgrey;
+  padding: 8px 12px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #fbfbfb;
+  box-shadow: -3px -2px 8px 0px rgb(34 60 80 / 20%);  
+}
+
+.watch {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 100%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.hours {
+  position: absolute;
+  top: calc(50% - 1px);
+  left: calc(50% - 1px);
+  width: 40px;
+  height: 2px;
+  transform-origin: 1px 1px;
+  /* transform: rotate(-45deg); */
+  background-color: black;
+  box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.minutes {
+  position: absolute;
+  top: calc(50% - 2px);
+  left: calc(50% - 2px);
+  width: 60px;
+  height: 4px;
+  transform-origin: 2px 2px;
+  /* transform: rotate(0deg); */
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.seconds {
+  position: absolute;
+  top: calc(50%);
+  left: calc(50%);
+  width: 57px;
+  height: 1px;
+  transform-origin: top left;
+  /* transform: rotate(90deg); */
+  background-color: rgb(197, 15, 15);
+  box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: calc(50% - 4px);
+  left: calc(50% - 4px);
+  border-radius: 50%;
+  background-color: black;
+}
+
+.close {
+  position: absolute;
+  display: block;
+  top: 3px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+  background-color: gray;
+  background-image: url('../../assets/images/close4.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.close:hover {
+  transform: rotate(90deg);
+  border-radius: 50%;
+  transition: all 0.2s ease-out;
+}
+
+.three {
+  position: absolute;
+  top: 68px;
+  left: 137px;
+  font-size: 14px;
+}
+
+.six {
+  position: absolute;
+  top: 133px;
+  left: 70px;
+  font-size: 14px;
+}
+
+.nine {
+  position: absolute;
+  top: 65px;
+  left: 7px;
+  font-size: 14px;
+}
+
+.twelve {
+  position: absolute;
+  top: 2px;
+  left: 69px;
+  font-size: 14px;
+}

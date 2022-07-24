@@ -1,0 +1,11 @@
+.label-city {
+  text-transform: uppercase;
+  text-align: center;
+  width:fit-content;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6px;
+  border-radius: 8px;
+  text-shadow: 3px 3px 3px rgb(150 150 150 / 60%);
+}
