@@ -18,4 +18,4 @@ jobs:
         with:
           token: ${{ secrets.TOKEN }} # Название токена из настроек репозитория ( Settings-Secrets-)
           branch: gh-pages # The branch the action should deploy to.
-          folder: build/static # The folder the action should deploy.
+          folder: build # The folder the action should deploy.
