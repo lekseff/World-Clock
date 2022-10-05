@@ -12,7 +12,6 @@ function Clock(props) {
     });
 
     useEffect(() => {
-        console.log('use');
         const getArrowTime = () => {
             const date = new Date();
             const utcHours = date.getUTCHours();
@@ -29,7 +28,6 @@ function Clock(props) {
 
         const intervalId = setInterval(() => {
             const { hours, minutes, seconds } = getArrowTime();
-            console.log('int');
             setTime(() => ({ hours, minutes, seconds }));
         }, 1000);
 
